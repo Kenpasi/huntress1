@@ -10,3 +10,10 @@ const prefix = config.prefix
 // Create an instance of a Discord client
 const client = new Discord.Client();
 
+/**
+ * The ready event is vital, it means that only _after_ this will your bot start reacting to information
+ * received from Discord
+ */
+client.on('ready', () => {
+  console.log('I am ready!');
+});
