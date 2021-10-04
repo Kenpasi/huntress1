@@ -39,14 +39,21 @@ client.on('message', message =>
     console.log(b);
   }
 
-  if (message.content.startsWith(`${prefix} dim hp`)) //condition is working
+  else if (message.content.startsWith(`${prefix} dim hp`)) //condition is working
   {
     
     b = message.content.slice(prefix.length+7);
     message.channel.send({embed});
     console.log(b);
   }
-
+  
+  else if (message.content.startsWith(`${prefix} dim mp`)) //condition is working
+  {
+    
+    b = message.content.slice(prefix.length+7);
+    message.channel.send({embed});
+    console.log(b);
+  }
  
   
 
