@@ -1,2 +1,4 @@
-# huntress1
-bot for discord, boss timers
+# Huntress Boss Timer for private server of BDO
+
+1- Create a channel named #boss-timer
+2- Invite the discord bot
