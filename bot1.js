@@ -7,6 +7,7 @@
 export const TextInput = styled.input`
   ${({ theme }) => theme.typography.p.m}
   size: "20";
+  size: "32";
   display: flex;
   flex: 1;
   width: 100%;
