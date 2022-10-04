@@ -3,6 +3,28 @@
  */
 
 // Import the discord.js module
+
+export const TextInput = styled.input`
+  ${({ theme }) => theme.typography.p.m}
+  size: "20";
+  display: flex;
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex: 1;
+  margin-right: 20px;
+  background: rgba(255, 255, 255, 0.7);
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  &:focus {
+    background: white;
+    outline: none;
+  }
+  border: none;
+  padding: 0px 16px;
+`;
+
 const Discord = require('discord.js');
 const config = require('./config.json');
 const prefix = config.prefix
