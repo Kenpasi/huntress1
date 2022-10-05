@@ -50,7 +50,7 @@ client.on('message', message =>
   .setAuthor("Dim Tree")
   .setColor(0xFA09B4)
   .setTitle("Current HP")
-  
+  .setTimeToSpawn("Time to spawn: ")
   .setDescription(`[${b}%]`)
   .setImage("https://bdocodex.com/items/ui_artwork/ic_04022.png")
   
@@ -67,6 +67,17 @@ client.on('message', message =>
     
     b = message.content.slice(prefix.length+7);
     message.channel.send({embed});
+    console.log(b);
+  }
+  
+  else if (message.content.startsWith(`Time to spawn:${prefix}`)) //condition is working
+  {
+    
+    b = message.content.slice(prefix.length+7);
+    message.channel.send({embed});
+    message.channel.send(`kzarka spawns :${time.getTime(-7)}`)
+    message.channel.send(`dim spawns :${time.getTime(-8)}`)
+    message.channel.send(`offin spawns :${time.getTime(-8.3)}`)
     console.log(b);
   }
   
