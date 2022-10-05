@@ -53,6 +53,7 @@ client.on('message', message =>
   .setTimeToSpawn("Time to spawn: ")
   .setDescription(`[${b}%]`)
   .setImage("https://bdocodex.com/items/ui_artwork/ic_04022.png")
+  .setHP("Setting HP to")
   
   
   
@@ -78,6 +79,15 @@ client.on('message', message =>
     message.channel.send(`kzarka spawns :${time.getTime(-7)}`)
     message.channel.send(`dim spawns :${time.getTime(-8)}`)
     message.channel.send(`offin spawns :${time.getTime(-8.3)}`)
+    console.log(b);
+  }
+  
+  else if (message.content.startsWith(`Set hp${prefix}`)) //condition is working
+  {
+    
+    b = message.content.slice(prefix.length);
+    message.channel.send({embed});
+    message.channel.send(`Current boss hp: &{message.content}%`);
     console.log(b);
   }
   
